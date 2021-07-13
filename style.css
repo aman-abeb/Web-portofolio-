@@ -1,0 +1,156 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', cursive;
+}
+body{
+    min-height: 10 vh; 
+    background-color: #c67878;
+}
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding:10px 60px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-direction: initial;
+    flex-wrap: wrap;
+    background-image: url(images/bb.png);
+    z-index: 10000;
+}
+header .logo{
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: cursive;
+}
+header ul{
+   display: flex;
+ justify-content: center;
+ align-items: center;
+
+}
+header ul li{
+        list-style-type: none;
+    margin-left: 20px;
+}
+header ul li a{
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #fff;
+    border-radius: 20px;
+
+}
+header ul li a:hover,
+header ul li a.active{
+    background: white;
+    color: #000000;
+}
+nav{
+    position: static;
+    width: 100%;
+    height: 80vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.centerPic{
+    position: relative;
+    display: block;
+    margin-top: auto;
+    margin-left: auto;
+    margin-left: auto;
+    top: 80px;
+    border-radius: 50%;
+    max-width: 250px;
+
+}
+nav img{
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover ;
+    z-index: -100000;
+}
+
+.work, .about, .contact{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; 
+    flex-direction: row;
+    width: 100%;
+    height: 700px;
+}
+.about{
+    background-color: #c67878 ;
+    z-index: -100000;
+
+}
+.text{
+    background-color: #fff;
+}
+.about .hm{
+    display: flex;
+    width: 100%;
+    height: 700px;
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    object-fit: cover ;
+    z-index: -1000;
+    
+}
+.contact{
+    position: relative;
+    min-width: 10vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(images/Firewatch\ wallpaper\ minus\ the\ human\ elements\ [1920x1080].jpg);
+}
+.lay{
+    width: 50%;
+    padding: 40px;
+    background: #c0c0ce;
+    background-image: url(images/5596310.jpg);
+    border-radius: 20px;
+}
+.lay h2{
+    font-size: 35px;
+    font-family: cursive;
+}
+.lay .box{
+    position: relative;
+    width: 100%;
+    margin: 10px 0;
+}
+.address img{
+    font-size: 0vh;
+    max-width: 20px;
+}
+.footer .footer-bottom{
+    background: #000 ;
+    color: #808080;
+    height: 30px;
+    width: 100%;
+    position: bottom;
+    text-align: center;
+    bottom: 10px;
+}
