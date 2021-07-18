@@ -2,13 +2,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 *{
     margin:0;
-    padding: 0;
+    padding:0;
     box-sizing: border-box;
     font-family: 'Poppins', cursive;
 }
+
 body{
     min-height: 10 vh; 
-    background-color: #c67878;
+}
+html {
+    font-family: "Share Tech Mono", monospace;
+    font-size: 12px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    color: #ffffff;
+    background-color: #121622;
+    width: 100%;
+    background-image: url(images/ba.png);
+    background-size: 100% 100%;
 }
 header{
     position: sticky;
@@ -22,32 +33,35 @@ header{
     flex-direction: initial;
     flex-wrap: wrap;
     background-image: url(images/bb.png);
-    z-index: 10000;
+    z-index: 1000;
 }
 header .logo{
     color: #fff;
     font-weight: 700;
     text-decoration: none;
-    font-size: 2em;
+    font-size: 2.5em;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-family: cursive;
 }
 header ul{
-   display: flex;
- justify-content: center;
- align-items: center;
+    position: relative;
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 header ul li{
-        list-style-type: none;
-    margin-left: 20px;
+    list-style-type: none;
+    
 }
 header ul li a{
     text-decoration: none;
     padding: 6px 15px;
     color: #fff;
     border-radius: 20px;
+    margin-left: -10px;
 
 }
 header ul li a:hover,
@@ -55,27 +69,42 @@ header ul li a.active{
     background: white;
     color: #000000;
 }
-nav{
-    position: static;
-    width: 100%;
+.work, .about, .contact{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; 
+    flex-direction: row;
+    padding: 43px;
+    background: linear-gradient(
+      0deg,
+      rgba(20, 22, 22, 0.9)35%,
+      rgba(115, 30, 185, 0.9) 100%
+    );
+    width: 96%;
     height: 80vh;
+    margin-top: 2%;
+    margin-left: 2%;
+    border-radius: 30px;
+}
+
+.home{
+    width: 96%;
+    height: 85vh;
+    margin-top: 2%;
+    margin-left: 2%;
     padding: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.centerPic{
+    background-size: contain;
     position: relative;
-    display: block;
-    margin-top: auto;
-    margin-left: auto;
-    margin-left: auto;
-    top: 80px;
-    border-radius: 50%;
-    max-width: 250px;
-
+    border-radius: 30px;
+    
 }
-nav img{
+
+.home .content .background-image{
     position: absolute;
     top: 0;
     left:0;
@@ -83,74 +112,220 @@ nav img{
     height: 100%;
     object-fit: cover ;
     z-index: -100000;
+    border-radius: 30px;
 }
-
-.work, .about, .contact{
-    position: relative;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap; 
-    flex-direction: row;
+.home .page{
+  
     width: 100%;
-    height: 700px;
-}
-.about{
-    background-color: #c67878 ;
-    z-index: -100000;
-
-}
-.text{
-    background-color: #fff;
-}
-.about .hm{
-    display: flex;
-    width: 100%;
-    height: 700px;
+    max-width: 58rem;
+    text-transform: uppercase;
     position: absolute;
-    top: 0;
-    left:0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    
     width: 100%;
-    object-fit: cover ;
-    z-index: -1000;
+  min-height: 100vh;
+  max-width: 60rem;
+  margin: auto;
+}
+.home .content .text{
+  margin-top: 40px; 
+}
+.home .content .text h1{
+    letter-spacing: 0.5rem;
+    font-size: 0rem;
+    font-weight: 600;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    animation: typing 5s steps(27), blink 1s ease-in-out 7s infinite;
+    width: 100%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: auto;
+    border-right: 4px solid rgba(255, 255, 255, 1);
+}
+@keyframes typing {
+    75% {
+      width: 0ch;
+      color: rgb(0, 0, 0);
+    }
+    100% {
+      width: 20ch;
+    }
+  }
+  
+  @keyframes blink {
+    0% {
+      border-right: 80px solid rgba(255, 255, 255, 0);
+    }
+    100% {
+      border-right: 10px solid rgb(194, 194, 194);
+    }
+  }
+.home .content .text p{
+    font-size: 4rem;
+    margin: 1rem 0;
+    color: rgba(249, 105, 14, 1);
+    background: linear-gradient(
+    to right,
+    rgb(84, 249, 14) 0%,
+    rgba(102, 51, 153, 1) 100%
+    );
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip:text;
+}
+
+.home .content .text .home-title{
+    font-size: 30px;
+}
+.center-pic{
+    top: 30px;
+    position: relative;
+    max-width: 40%;
+    border-radius: 50%;
     
 }
-.contact{
+
+.about .title, .work .title, .contact .title{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+.about .box .content .right{
+    width:42% ;
+}
+.about .box .content .right .image{
     position: relative;
-    min-width: 10vh;
-    padding: 50px 100px;
+    height: auto ;
+    object-fit: cover;
+    border-radius: 6px;
+    width: 100%;
     display: flex;
+    margin-top: auto;
+    margin-left: auto;
+    top: auto;
+    max-width: 400px;
+}
+.about .box .content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    top: auto;
+    left: auto;
+    width: auto;
+    padding:0px 0px;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+}
+.about .box .content .left{
+    width:58% ;
+}
+.about .box .content .left .discription{
+   /*font-size: 15px;
+    font-weight: 700;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    margin-right:-20px;
+    float: right;*/
+    font-size: 14px;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-bottom: auto;
+}
+.contact {
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 50px;
+    display:flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-image: url(images/Firewatch\ wallpaper\ minus\ the\ human\ elements\ [1920x1080].jpg);
+    background-size:cover ;
+
 }
-.lay{
-    width: 50%;
-    padding: 40px;
-    background: #c0c0ce;
-    background-image: url(images/5596310.jpg);
-    border-radius: 20px;
+
+.contact .content{
+    max-width: 800px;
+    text-align: center;
 }
-.lay h2{
-    font-size: 35px;
-    font-family: cursive;
+.contact .content h1{
+    font-size: 36px;
+    font-weight: 500;
+    color: 0;
 }
-.lay .box{
-    position: relative;
+.contact .container{
     width: 100%;
-    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    justify-content: space-between;
 }
-.address img{
-    font-size: 0vh;
+
+.contact .content .container .left{
+    width: 200%;
+    display: flex;
+    flex-direction: column;
+}
+.contact .content .container .left .address{
+    position: relative;
+    justify-items: stretch;
+    padding: 20px 0;
+}
+
+
+.contact .right{
+  width: 100%;
+  float: left;
+  background: linear-gradient(
+      135deg,
+      rgba(131, 232, 235, 0.9)30%,
+      rgb(115, 43, 184, 0.9) 100%
+    );
+  border-bottom: 20px;
+  border-radius: 20px;
+  padding: 50px 20px 50px 20px;
+}
+.contact .content .left .address img{
+    font-size: 10vh;
     max-width: 20px;
 }
+.contact .content .right .lay .button{
+    height:40px ;
+    width: 87%;
+    
+    
+}
+.contact .content .right .lay .button button{
+    height:80%;
+    width: 85%;
+    font-size: 15px;
+    font-family: fantasy;
+    
+}
+.contact .content .right .lay .button :hover{
+    background: rgb(2, 226, 255);
+    color: black;
+    
+
+}
+
+.contact .content .right .lay h2{
+    font-size: 25px;
+    font-family: cursive;
+}
 .footer .footer-bottom{
+    position: static;
+    bottom: 0;
     background: #000 ;
     color: #808080;
-    height: 30px;
+    margin-top: 7px;    
+    height: 20px;
     width: 100%;
-    position: bottom;
     text-align: center;
-    bottom: 10px;
 }
