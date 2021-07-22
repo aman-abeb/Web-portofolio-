@@ -8,31 +8,31 @@
         <link rel="styleSheet" type="text/css" href="style.css">
     </head>
     <body>
-        <header>
+        <header class="head">
             <a href="index.html" class="logo"><sub><img src="images/u111.png" class="pic"></sub><span>AMAN</span></a>
             <ul>
-                <li><a href="index.html">Home </a></li>
+                <li><a href="#home">Home </a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#work">Work</a></li>
+                <li><a href="#work">Works</a></li>
+                <li><a href="#skills">Skill</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </header>
         <section class="home" id="home">
             <div class="content">
-                <img src="images\d1.jpg" class="background-image">
+                <img src="images\b1.png" class="background-image">
                 <div class="page">
                     <div class="image">
                         <img src="images\c1.jpg" class="center-pic">
                     </div>
                     <div class="text">
+                        
                         <h1 class="home-title">AMANUEL ABEBAYEHU</h1>
                         <p class="home-discription">Web Developer</p>
                     </div>
                 </div>
             </div>
         </section>
-
-
 
         <section>
             <div class="about" id="about">
@@ -49,73 +49,125 @@
                 </div>
             </div>
         </section>
-
-
-
         <section>
             <div class="work" id="work">
-                <div class="text">
-                    <h1 class="title">Work</h1>
-                    <p class="discription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae incidunt necessitatibus obcaecati iusto explicabo deleniti dolorum nam quasi laudantium ad odio illo omnis voluptatum debitis neque, accusamus maxime. At, magni!</p>
+                <div class="content">
+                    <div class="text">
+                        <h1 class="title">Work</h1>
+                        <p class="discription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae incidunt necessitatibus obcaecati iusto explicabo deleniti dolorum nam quasi laudantium ad odio illo omnis voluptatum debitis neque, accusamus maxime. At, magni!</p>
+                    </div>
                 </div>
             </div>
-        </section>   
-        
-        
-        <section>
-            <div class="contact" id="contact">
-                <div class="content">
-                    <h1>Contact</h1>
-                    <div class="container">
-                        <div class="left">
-                            <div class="address">
-                                <div class="phone">
-                                    <h3><img src="images\phone-call.png">Phone:</h3>
-                                    <p>+251934662923</p>
+        </section> 
+        <section class="skills" id="skills">
+            <div class="content">
+                <div class="max-width">
+                    <div class="skills-content">
+                        <h2 class="title">My skills</h2>
+                        <div class="column right">
+                            <div class="bars">
+                                <div class="info">
+                                    <span>C++</span>
+                                    <span>85%</span>
                                 </div>
-                                <div class="email">
-                                    <h3><img src="images\email.png">Email:</h3>
-                                    <p>mannyabeb@gmail.com</p>
+                                <div class="line c"></div>
+                            </div>
+                            <div class="bars">
+                                <div class="info">
+                                    <span>Python</span>
+                                    <span>55%</span>
                                 </div>
-                                <div class="facebook">
-                                    <h3><img src="images\facebook.png">Facebook:</h3>
-                                    <p><a href="https://www.facebook.com/amanuel.abebayehu">Amanuel Abebayehu</a></p>
+                                <div class="line python"></div>
+                            </div>
+                            <div class="bars">
+                                <div class="info">
+                                    <span>Java</span>
+                                    <span>68%</span>
                                 </div>
-                                <div class="instagram">
-                                    <h3><img src="images/instagram.png">Instagram:</h3>
-                                    <p><a href="https://www.instagram.com/manny_abeb">Aman Abebayehu</a></p>
-                                </div>   
+                                <div class="line java"></div>
+                            </div>
+                            <div class="bars">
+                                <div class="info">
+                                    <span>HTML</span>
+                                    <span>79%</span>
+                                </div>
+                                <div class="line html"></div>
+                            </div>
+                            <div class="bars">
+                                <div class="info">
+                                    <span>PERL</span>
+                                    <span>59%</span>
+                                </div>
+                                <div class="line perl"></div>
                             </div>
                         </div>
-                        <div class="right">
-                            <div class="lay">
-                                <form class="box">
-                                    <h2>Contact Me</h2>
-                                    <div class= "fname">
-                                        <span>Full Name</span><br/>
-                                        <input type="text" name="" required="required">
-                                    </div>
-                                    <div class="gmail">
-                                        <span>Email</span></br>
-                                        <input type="email" name="" required="required">
-                                    </div>
-                                    <div class="box">
-                                        <span>Write your message</span></br>
-                                        <textarea required="required"></textarea>
-                                    </div>
-                                    <div class="button">
-                                        <button type="submit">Send Message</button>
-                                    </div>
-                                </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="contact" id="contact">
+            <div class="content">
+                <div class="title">
+                    <h2>Contact</h2>
+                </div>
+                <div class="container">
+                    <div class="contactinfo">
+                        <div class="box">
+                            <div class="icon"></div>
+                            <div class="text">
+                                <h3><img src="images\phone-call.png">PHONE</h3>
+                                <p><span>+251934662923</span></p>
                             </div>
                         </div>
+                        <div class="box">
+                            <div class="icon"></div>
+                            <div class="text">
+                                <h3><img src="images\email.png">EMAIL</h3>
+                                <p><span>mannyabeb@gmail.com</span></p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="icon"></div>
+                            <div class="text">
+                                <h3><img src="images\facebook.png">FACEBOOK</h3>
+                                <p><a href="https://www.facebook.com/amanuel.abebayehu"target="_blank"><span>Amanuel Abebayehu</span></a></p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="icon"></div>
+                            <div class="text">
+                                <h3><img src="images/instagram.png">INSTAGRAM</h3>
+                                <p><a href="https://www.instagram.com/manny_abeb" target="_blank"><span>Aman Abebayehu</span></a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contactform">
+                            <form>
+                                <h2>Contact Me</h2>
+                                <div class= "in">
+                                    <span>Full Name</span><br/>
+                                    <input type="text" name="" required="required">
+                                </div>
+                                <div class="in">
+                                    <span>Email</span></br>
+                                    <input type="email" name="" required="required">
+                                </div>
+                                <div class="in">
+                                    <span>Write your message</span></br>
+                                    <textarea required="required"></textarea>
+                                </div>
+                                <div class="in">
+                                    <button type="submit">Send</button>
+                                </div>
+                            </form>
                     </div>
                 </div>
             </div>
         </section>  
         <footer class="footer">
             <div class="footer-bottom">
-                &copy; Designed by Amanuel Abebayehu | All rights reserved 2020
+                &copy; Designed by Amanuel Abebayehu | All rights reserved 2021
             </div>
         </footer> 
     </body>
