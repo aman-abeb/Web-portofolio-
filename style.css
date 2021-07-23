@@ -6,10 +6,8 @@
     box-sizing: border-box;
     font-family: 'Poppins', cursive;
 }
+/* the body */
 
-body{
-    max-height: 100 vh; 
-}
 html {
     font-size: 13px;
     scroll-behavior: smooth;
@@ -17,6 +15,10 @@ html {
     background-image: url(images/b1.png);
     background-size: 100% 100%;
 }
+body{
+    min-width: 10vh;
+}
+/* Header part */
 .head{
     position: fixed;
     top: 0;
@@ -25,16 +27,15 @@ html {
     padding:12px;
 }
 header{
-    
-    width: 98%;
-    margin-bottom: 50px;
-
+    padding-bottom:20px ;
+    width: 100%;
+    position: fixed;
     display: flex;
     justify-content:space-evenly;
     align-items: center;
     flex-direction: initial;
     flex-wrap: wrap;
-    background-image: url(images/bb.png);
+    background-color: #141517;
     z-index: 1000;
 }
 header .logo{
@@ -60,7 +61,7 @@ header ul li{
 }
 header ul li a{
     text-decoration: none;
-    padding: 6px 20px;
+    padding: 7px 20px;
     color: #fff;
     border-radius: 20px;
 
@@ -74,11 +75,11 @@ header ul li a.active{
       );
     color: #000000;
 }
-.work, .about, .skills, .contact{
+.gall, .about, .skills, .contact, .home{
     padding-top: 85px;
     height: 100vh;
 }
-.work .content , .about .box{
+.gall .content , .about .box{
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -86,7 +87,7 @@ header ul li a.active{
     flex-wrap: wrap; 
     flex-direction: row;
 }
-.work .content , .about .box, .skills .content, .contact .content{
+.gall .content , .about .box{
     padding: 43px;
     background: linear-gradient(
       0deg,
@@ -102,92 +103,71 @@ header ul li a.active{
     margin-bottom: 50px;
 }
 .skills .content{
+    
     padding: 43px;
     background: linear-gradient(
       0deg,
       rgba(0, 0, 0, 0.8)35%,
       rgba(0, 0, 0, 0.8) 100%
     );
-    width: 50%;
-    height:80vh;
+    width: 80%;
+    height:84vh;
+    box-shadow: 3px 3px;
     margin-top: 1%;
-    margin-left: 28%;
+    margin-left: 8%;
     border-radius: 20px;
     margin-bottom: 50px;
 }
-
+/* Home page*/
 .home{
-    width: 100%;
-    height: 100vh;
     display: flex;
-    justify-content: center;
+    background: url(images/111.png) no-repeat center;
+    height: 100vh;
+    color: #fff;
+    min-height: 500px;
+    background-size: cover;
+}
+.home .max-width{
+  width: 100%;
+  display: flex;
+}
+.home .home-content img{
+    border-radius: 50%;
     position: relative;
-    background: url(images\c1.jpg);
-
+    object-fit: cover;
+    width: 50%;
+    top: auto;
+    max-width: 40%;
 }
-
-.home .content .background-image{
-    position: absolute;
-    top: 0;
-    left:0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover ;
-    z-index: -1000;
-}
-.home .page{
+.home .home-content{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     position: relative;
-    top: 20px;
-    padding:100px 50px;
-    flex-direction: row-reverse;
+    padding:0px 0px;
+    flex-direction: row;
     flex-wrap: wrap;
+    padding-left: 0px;
+    padding-top: 0px;
 }
-.home .content .text{
-  margin-top: 40px; 
-  color:#ffffff;
+
+.home .home-content h2{
+    font-size: 25px;
 }
-.home .content .text h1{
-    letter-spacing: 0.5rem;
-    font-size: 0rem;
+.home .home-content h1{
+    font-size: 38px;
     font-weight: 600;
-    overflow: hidden;
-    white-space: nowrap;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    animation: typing 5s steps(27), blink 1s ease-in-out 7s infinite;
-    width: 100%;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin: auto;
-    border-right: 4px solid rgba(255, 255, 255, 1);
-}
+    margin-left: -3px;
+    font-weight: 400;
+    text-shadow: 9px 9px 9px rgb(0, 0, 0);
 
-.home .content .text p{
-    font-size: 4rem;
-    margin: 1rem 0;
-    color: rgba(249, 105, 14, 1);
-    background: linear-gradient(
-    to right,
-    rgb(84, 249, 14) 0%,
-    rgba(102, 51, 153, 1) 100%
-    );
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip:text;
 }
-
-.home .content .text .home-title{
-    font-size: 30px;
-}
-.center-pic{
-    top: 100px;
-    position: relative;
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
-}
-
-.about .title, .work .title, .skills .content .title{
+.home .home-content h1 span{
+    color: rgb(172, 82, 255);
+    font-family: cursive;
+} 
+/* about page */
+.about .title, .gall .title, .skills .content .title{
     text-align: center;
     font-size: 40px;
     font-weight: 900;
@@ -200,13 +180,14 @@ header ul li a.active{
     padding:0px 0px;
     flex-direction: row-reverse;
     flex-wrap: wrap;
+    top: -50px;
 }
 .about .box .content .right{
     width:42% ;
 }
 .about .box .content .right .image{
     position: relative;
-    height: auto ;
+    height: auto;
     left: 10px;
     object-fit: cover;
     border-radius: 6px;
@@ -215,19 +196,38 @@ header ul li a.active{
     margin-top: auto;
     margin-left: auto;
     top: auto;
-    max-width: 400px;
+    max-width: 400%;
 }
 
 .about .box .content .left{
     width:58% ;
 }
 .about .box .content .left .discription{
-    font-size: 14px;
-    margin-top: 5px;
-    margin-left: auto;
-    margin-bottom: auto;
+    font-size: 17px;
+    margin-top: 1px;
 }
-
+/* gallery page */
+div.gallery {
+    padding-left: 20px;
+    margin: 5px;
+    float: left;
+    width: 240px;
+  }
+.gallary .text{
+    display: flex;
+    align-items: center;
+}
+div.gallery:hover {
+    padding: 10px 10px 10px;
+}
+  
+div.gallery img {
+    width: 100%;
+    height: 100%;
+    max-width: 50%;
+    
+}
+/* skill page */
 .skills .content{
     position: relative;
     justify-content: space-between;
@@ -285,23 +285,39 @@ header ul li a.active{
 .skills-content .right .perl::before{
     width: 59%;
 }
-
-.contact .content{  
+/* contact page */
+.contact{
     position: relative;
+    padding: 50px 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-.contact .title{
-    max-width: 70px;
-    text-align: center;
+    background-size: cover;
 
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.8)35%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
+    width: 98%;
+    height: 100%;
+    box-shadow: 3px 3px;
+    margin-top: 10%;
+    margin-left: 1%;
+    border-radius: 20px;
 }
+.contact .content{  
+    max-width: 800px;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
 .contact .title h2{
     text-align: center;
-    font-size: 40px;
-    font-weight: 900;
+    font-size: 36px;
+    font-weight: 500;
 }
 
 .contact .container{
@@ -309,10 +325,10 @@ header ul li a.active{
     display:flex ;
     justify-content: center;
     align-items: center;
-    height: 70vh;
+    margin-top: 30px;
 }
 .container .contactinfo{
-    width: 52%;
+    width: 50%;
     display:flex ;
     flex-direction: column;
 }
@@ -327,7 +343,7 @@ header ul li a.active{
     font-size: 16px;
     color:rgb(255, 255, 255);
     flex-direction: column;
-    font-weight: 300;
+    font-weight: 300000;
 
 } 
 .container .contactinfo .box .text h3{
@@ -342,7 +358,7 @@ header ul li a.active{
 }
 .contactform{
     width: 40%;
-    padding: 20px;
+    padding:50px;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
     background-image: url(images/b1.png);
@@ -350,14 +366,14 @@ header ul li a.active{
     height: 98%;
 }
 .contactform h2{
-    font-size: 20px;
+    font-size: 26px;
     color: rgb(255, 255, 255);
     font-weight: 500;
 }
 .contactform .in{
     position: relative;
-    width: 70%;
-    margin-top: 1px;
+    width: 100%;
+    margin-top: 10px;
 }
 .contact .box .text span{
     color: #19A286;
@@ -365,7 +381,7 @@ header ul li a.active{
 .contact .in input,
 .contact .in textarea{
     width: 100%;
-    padding: 3px 0;
+    padding: 4px 0;
     font-size:16px ;
     margin: 10px 0;
     border: none;
@@ -383,47 +399,165 @@ header ul li a.active{
     font-size:15px;
     border-radius: 20px;
 }
-
+/* footer page */
 .footer .footer-bottom{
-    position: static;
-    bottom: 0;
+    margin-top: 20px;
     background: #000 ;
     color: #808080;
-    margin-top: 7px;    
-    height: 20px;
+    height: 30px;
     width: 100%;
+    position: bottom;
     text-align: center;
+    bottom: 90px;
 }
-/* responsive media query start */
-@media (max-width:530px) {
-    .head{
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: auto;
-        padding:12px;
-    }
-    header .logo{
-        color: #fff;
-        font-weight: 700;
-        text-decoration: none;
-        font-size: 1.5em;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        font-family: cursive;
-                
-    }
-    header ul{
-        position: relative;
-        font-size: 8px;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        height: 20vh;
-        width: 10%;
-        left: -20%;
-        top: 0;
+
+/* responsive media query */
+@media only screen and (max-width: 400px) {
+    .about .box{
+        height: 117%;
 
     }
+    .about .content {
+        height: 350px;
+        width: 350px;
+    }
+    .skills{
+        padding-top: 5px;
+        height: 10vh;
+    }
+    .footer .footer-bottom{
+        height: 200%;
+    }
+    header ul{
+        font-size: 13px;
+    
+    }
+    
+}
+
+@media (max-width: 400px) {
+    .max-width{
+        padding: 0 5px;
+    }
+    .skills-content{
+        height: 100px;
+    }
+    div.gallery:hover {
+        visibility: hidden;
+    }
+    
+}
+@media only screen and(max-width:715px){
+    .gall .content{
+        top: 30px;
+        align-items: center;
+        padding-left: 25%;
+    }
+    .gall .title{
+        align-items: center;
+        padding-left: 25%;
+    }
+    div.gallery img {
+        width: 100%;
+        height: 100%;
+        max-width: 20%;
+        
+    }
+    div .text{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    div.gallery:hover {
+        padding: 0px;
+    }
+}
+@media only screen and (max-width:400px)
+{
+    header ul li a{
+        padding: 0px 7px;
+    }
+    
+    .about .box{
+        top: 20px;
+    }
+    .about, .skills, .contact, .home{
+        padding-top: 1px;
+        height: 100vh;
+    }
+    div .gallery img {
+        width: 50%;
+        height: auto;
+        
+    }
+    
+    
+}
+@media only screen and (min-width:1000px){
+    .about .content img{
+        height: 40px;
+        width: 600px;
+    }
+}
+@media only screen and (max-width:991px)
+{
+    .contact{
+        padding: 50px;
+        
+    }
+    .container{
+        flex-direction: column;
+        
+        
+    }
+    .contactinfo{
+        margin-bottom: 40px;
+        display: flex;
+        align-items: center;
+        
+    }
+    .container .contactinfo,
+    .contactform{
+        width: 100%;
+    }
+    .contact .container .contactinfo .box .text{
+        padding-top: 1px;
+        margin-left: 50px;
+        font-size: 13px;
+    
+    
+    } 
+    .contactform h2{
+        font-size: 20px;
+        color: rgb(255, 255, 255);
+        font-weight: 200;
+        padding-bottom: 1px;
+    }
+    
+    .skills .content .column{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .skills .content .skills-content .right span{
+        font-weight: 600;
+        font-size: 20px;
+    }
+    .skills .content .skills-content .right .line{
+        height: 10px;
+        width: 100%;
+        background: lightgrey;
+        position: relative;
+        border-radius: 20px;
+    }
+    .about .title{
+        font-size: 30px;
+    }
+}
+@media only screen and(max-width:715px){
+    div.gallery {
+        padding-left: 80px;
+        margin: 50px;
+        width: 10px;
+      }
     
 }
