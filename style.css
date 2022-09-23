@@ -323,16 +323,16 @@ header ul li a.active{
     width: 85%;
 }
 .skills-content .right .python::before{
-    width: 55%;
+    width: 87%;
 }
 .skills-content .right .java::before{
-    width: 68%;
-}
-.skills-content .right .html::before{
     width: 79%;
 }
+.skills-content .right .html::before{
+    width: 93%;
+}
 .skills-content .right .perl::before{
-    width: 59%;
+    width: 64%;
 }
 /* contact page */
 
