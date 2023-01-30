@@ -320,19 +320,19 @@ header ul li a.active{
     background: #30AD81;
 }
 .skills-content .right .c::before{
-    width: 85%;
+    width: 97%;
 }
 .skills-content .right .python::before{
-    width: 87%;
+    width: 92%;
 }
 .skills-content .right .java::before{
-    width: 91%;
+    width: 96%;
 }
 .skills-content .right .html::before{
     width: 93%;
 }
 .skills-content .right .perl::before{
-    width: 64%;
+    width: 88%;
 }
 /* contact page */
 
